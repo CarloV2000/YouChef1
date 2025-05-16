@@ -19,18 +19,13 @@ include 'db.php';
 </head>
 <body>
     <div class ="card">
+        <header>
+            <h1>YouChef</h1>
+        </header>
         <div class="welcome">
-            <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+            <h3>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h3>
             <p>You're now logged in to your account.</p>
-
-            <div class="category-section">
-                <h3>Selezionare la categoria di ricetta</h3>
-                <div class="buttons">
-                    <button>Primo</button>
-                    <button>Secondo</button>
-                    <button>Dolce</button>
-                </div>
-            </div>
+            <?php include 'main.php'; ?>
         </div>
     <a href="logout.php" class="logout">Logout</a>
     </div>
